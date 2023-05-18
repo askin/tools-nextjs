@@ -1,5 +1,5 @@
 import Layout from "@/components/layout";
-import { useState } from "react"
+import {useState} from "react"
 
 export default function Page() {
 
@@ -9,7 +9,7 @@ export default function Page() {
 
     function convertToBinary() {
         var result = convertToBinaryValue.split('').map(function (char) {
-            return char.charCodeAt(0).toString(2).padStart(8,'0');
+            return char.charCodeAt(0).toString(2).padStart(8, '0');
         }).join(' ');
 
         setResultValue(result)
@@ -27,32 +27,34 @@ export default function Page() {
     return (
         <Layout>
             <div className="content-3in1">
-                <form name="myform" action="">
-                    <h1><a href="?" className="redTitle">convert 2 binary</a></h1>
-                    <input
-                        type="text"
-                        className="redInput"
-                        value={convertToBinaryValue}
-                        onChange={e => { setConvertToBinaryValue(e.currentTarget.value); }}
-                    />
-                    <br/>
-                    <br/>
-                    <input type="button" name="button" id="button" value="convert" className="button" onClick={convertToBinary} />
-                </form>
+                <h1><a href="?" className="redTitle">convert 2 binary</a></h1>
+                <input
+                    type="text"
+                    className="redInput"
+                    value={convertToBinaryValue}
+                    onChange={e => {
+                        setConvertToBinaryValue(e.currentTarget.value);
+                    }}
+                />
+                <br/>
+                <br/>
+                <input type="button" name="button" id="button" value="convert" className="button"
+                       onClick={convertToBinary}/>
             </div>
             <div className="content-3in1">
-                <form name="myform2" action="">
-                    <h1><a href="?" className="grayTitle">convert 2 ascii</a></h1>
-                    <input
-                        type="text"
-                        className="grayInput"
-                        value={convertoAsciiValue}
-                        onChange={e => { setConvertoAsciiValue(e.currentTarget.value); }}
-                    />
-                    <br/>
-                    <br/>
-                    <input type="button" name="button" id="button2" value="convert" className="button" onClick={convertToAscii} />
-                </form>
+                <h1><a href="?" className="grayTitle">convert 2 ascii</a></h1>
+                <input
+                    type="text"
+                    className="grayInput"
+                    value={convertoAsciiValue}
+                    onChange={e => {
+                        setConvertoAsciiValue(e.currentTarget.value);
+                    }}
+                />
+                <br/>
+                <br/>
+                <input type="button" name="button" id="button2" value="convert" className="button"
+                       onClick={convertToAscii}/>
             </div>
             <div id="sonuc" className="sonucDiv" align="center">{resultValue}</div>
         </Layout>
