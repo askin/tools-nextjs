@@ -1,27 +1,94 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/*@tailwind base;*/
+/*@tailwind components;*/
+/*@tailwind utilities;*/
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/*:root {*/
+/*  --foreground-rgb: 0, 0, 0;*/
+/*  --background-start-rgb: 214, 219, 220;*/
+/*  --background-end-rgb: 255, 255, 255;*/
+/*}*/
+
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*    --foreground-rgb: 255, 255, 255;*/
+/*    --background-start-rgb: 0, 0, 0;*/
+/*    --background-end-rgb: 0, 0, 0;*/
+/*  }*/
+/*}*/
+
+/*body {*/
+/*  color: rgb(var(--foreground-rgb));*/
+/*  background: linear-gradient(*/
+/*      to bottom,*/
+/*      transparent,*/
+/*      rgb(var(--background-end-rgb))*/
+/*    )*/
+/*    rgb(var(--background-start-rgb));*/
+/*}*/
+
+/**
+ * TODO: Use tailwind correctly
+ */
+
+body, td, th {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 10px;
+    color: #056070;
+    background-image: url(/images/fading_background_18.png);
+    background-repeat: repeat-x;
+    margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+a {
+    color: inherit;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.siteHeader {
+    background-color: #333;
+    color: #ccc;
+    height: 55px;
+}
+
+.siteNameButton {
+    color: #fff;
+    font-size: 26px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigationButton {
+    font-size: 16px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #C00;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 2;
+}
+
+textarea {
+    font-size: 19px;
+    width: 700px;
+    border: 18px #C00 solid;
+    margin: 0px 0px 20px 0px;
+}
+
+.content {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.content-3in1 {
+    width: %49;
+    float: left;
+    padding: 30px;
+}
+
+.content-3in1-spacer {
+    width: %2;
+    float: left;
+    padding: 30px;
+    padding-top: 120px;
 }
