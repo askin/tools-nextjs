@@ -4,16 +4,16 @@ import Layout from '../components/layout'
 
 export default function Page() {
     const tools = [
-        {href: "binary-ascii-converter", title: "Ascii - Binary Converter"},
-        {href: "get-header.php", title: "Get Web Page Header"},
-        {href: "decimal-hexadecimal.php", title: "Decimal - Hexadecimal Converter"},
-        {href: "whois", title: "Who is"},
-        {href: "whatismyip", title: "What is my IP?"},
-        {href: "unixtimestamp", title: "Unix Time Conversion"},
-        {href: "dencoder", title: "Decode / Encode URL"},
-        {href: "tckn", title: "Validate and Generate TCKN"},
-        {href: "ascii-table", title: "Table of ASCII Characters"},
-        {href: "demo-information", title: "Demo ZIP / Credit Card. etc.."}
+        {enabled: true, href: "binary-ascii-converter", title: "Ascii - Binary Converter"},
+        {enabled: false, href: "get-header.php", title: "Get Web Page Header"},
+        {enabled: true, href: "decimal-hexadecimal", title: "Decimal - Hexadecimal Converter"},
+        {enabled: false, href: "whois", title: "Who is"},
+        {enabled: true, href: "whatismyip", title: "What is my IP?"},
+        {enabled: true, href: "unixtimestamp", title: "Unix Time Conversion"},
+        {enabled: true, href: "dencoder", title: "Decode / Encode URL"},
+        {enabled: true, href: "tckn", title: "Validate and Generate TCKN"},
+        {enabled: true, href: "ascii-table", title: "Table of ASCII Characters"},
+        {enabled: true, href: "demo-information", title: "Demo ZIP / Credit Card. etc.."}
     ]
 
     const references = [
@@ -27,7 +27,7 @@ export default function Page() {
             <div className="content-3in1">
                 <h1>Tools :</h1>
                 <ul>
-                    {tools.map((tool) => (
+                    {tools.filter((tool) => (tool.enabled)).map((tool) => (
                         <ToolLink href={tool.href} title={tool.title}/>
                     ))}
                 </ul>
