@@ -43,6 +43,14 @@ a {
     color: inherit;
 }
 
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
 .siteHeader {
     background-color: #333;
     color: #ccc;
@@ -91,4 +99,36 @@ textarea {
     float: left;
     padding: 30px;
     padding-top: 120px;
+}
+
+.redInput {
+    font-size: 19px;
+    width: %100;
+    border: 18px #C00 solid;
+}
+
+.grayInput {
+    font-size: 19px;
+    width: %100;
+    border: 18px #666 solid;
+}
+
+.button {
+    font-size: 19px;
+}
+
+.sonucDiv {
+    color: #666;
+    font-size: 24px;
+    width: 750px;
+}
+
+.redTitle {
+    text-decoration: none;
+    color: #C00;
+}
+
+.grayTitle {
+    text-decoration: none;
+    color: #666;
 }
