@@ -1,5 +1,6 @@
 import Layout from "@/components/layout";
 import {useState} from "react"
+import ToolSpacer from "@/components/toolSpacer";
 
 export default function Page() {
 
@@ -44,6 +45,7 @@ export default function Page() {
                 <input type="button" name="button" id="timestamp" value="Now" className="button" onClick={getNow}/>
                 </form>
             </div>
+            <ToolSpacer image={false} />
             <div className="content-3in1">
                 <h1><a href="?" className="grayTitle">Date/Time</a></h1>
                 <input

@@ -91,13 +91,14 @@ textarea {
 .content-3in1 {
     float: left;
     padding: 30px;
-    width: 37%;
+    padding-right: 0;
+    width: 45%;
 }
 
 .content-3in1-spacer {
     width: 2%;
     float: left;
-    padding: 120px 30px 30px;
+    padding: 120px 0 0 0;
 }
 
 .redInput {

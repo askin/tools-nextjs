@@ -5,7 +5,7 @@ export default function Page() {
     return (
         <Layout>
             <Header title="Table of ASCII Characters"/>
-            <div className="content">
+            <div className="content" align="center">
                 <h1>Table of ASCII Characters</h1>
 
                 <pre>

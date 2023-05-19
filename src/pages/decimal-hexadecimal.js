@@ -1,5 +1,6 @@
 import Layout from "@/components/layout";
 import {useState} from "react"
+import ToolSpacer from "@/components/toolSpacer";
 
 export default function Page() {
 
@@ -33,6 +34,7 @@ export default function Page() {
                 <input type="button" name="button" id="button" value="convert" className="button"
                        onClick={decimalToHex}/>
             </div>
+            <ToolSpacer image={false} />
             <div className="content-3in1">
                 <h1><a href="?" className="grayTitle">convert 2 decimal</a></h1>
                 <input
