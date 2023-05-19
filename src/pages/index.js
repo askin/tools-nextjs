@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import ToolLink from  '../components/toollink'
 import Layout from '../components/layout'
+import Header from '../components/header'
 
 export default function Page() {
     const tools = [
@@ -24,6 +25,7 @@ export default function Page() {
 
     return (
         <Layout>
+            <Header title="Kelebek's Tools" />
             <div className="content-3in1">
                 <h1>Tools :</h1>
                 <ul>

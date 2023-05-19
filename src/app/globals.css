@@ -113,6 +113,10 @@ textarea {
     border: 18px #666 solid;
 }
 
+.bigInput {
+    width:700px;
+}
+
 .button {
     font-size: 19px;
 }
@@ -131,6 +135,10 @@ textarea {
 .grayTitle {
     text-decoration: none;
     color: #666;
+}
+
+.greenTitle {
+    color: #225533;
 }
 
 .greenText {
