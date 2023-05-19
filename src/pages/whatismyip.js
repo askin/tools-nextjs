@@ -16,7 +16,7 @@ export default function Page() {
     return (
         <Layout>
             <div className="redTitle">
-                <h1>Your IP is <span className="greenText" id="ipresult">{ resultValue }</span></h1>
+                <h1>Your IP is <span className="greenTitle" id="ipresult">{ resultValue }</span></h1>
             </div>
         </Layout>
     )

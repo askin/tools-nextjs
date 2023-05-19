@@ -80,7 +80,7 @@ textarea {
     font-size: 19px;
     width: 700px;
     border: 18px #C00 solid;
-    margin: 0px 0px 20px 0px;
+    margin: 0 0 20px 0;
 }
 
 .content {
@@ -89,27 +89,26 @@ textarea {
 }
 
 .content-3in1 {
-    width: %49;
     float: left;
     padding: 30px;
+    width: 37%;
 }
 
 .content-3in1-spacer {
-    width: %2;
+    width: 2%;
     float: left;
-    padding: 30px;
-    padding-top: 120px;
+    padding: 120px 30px 30px;
 }
 
 .redInput {
     font-size: 19px;
-    width: %100;
+    width: 100%;
     border: 18px #C00 solid;
 }
 
 .grayInput {
     font-size: 19px;
-    width: %100;
+    width: 100%;
     border: 18px #666 solid;
 }
 
@@ -121,10 +120,11 @@ textarea {
     font-size: 19px;
 }
 
-.sonucDiv {
+.resultDiv {
     color: #666;
     font-size: 24px;
-    width: 750px;
+    float: left;
+    width: 100%;
 }
 
 .redTitle {
@@ -138,9 +138,6 @@ textarea {
 }
 
 .greenTitle {
-    color: #225533;
-}
-
-.greenText {
+    text-decoration: none;
     color: #225533;
 }

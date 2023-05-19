@@ -56,7 +56,7 @@ export default function Page() {
                 <input type="button" name="button" id="button2" value="convert" className="button"
                        onClick={convertToAscii}/>
             </div>
-            <div id="sonuc" className="sonucDiv" align="center">{resultValue}</div>
+            <div id="sonuc" className="resultDiv" align="center">{resultValue}</div>
         </Layout>
     )
 }
