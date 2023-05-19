@@ -1,15 +1,16 @@
 import Layout from "@/components/layout";
 import {useState} from "react"
 import ToolSpacer from "@/components/toolSpacer";
+import Header from "@/components/header";
 
 export default function Page() {
 
     const [resultValue, setResultValue] = useState("");
     const [convertToBinaryValue, setConvertToBinaryValue] = useState("");
-    const [convertoAsciiValue, setConvertoAsciiValue] = useState("");
+    const [convertToAsciiValue, setConvertToAsciiValue] = useState("");
 
     function convertToBinary() {
-        var result = convertToBinaryValue.split('').map(function (char) {
+        const result = convertToBinaryValue.split('').map(function (char) {
             return char.charCodeAt(0).toString(2).padStart(8, '0');
         }).join(' ');
 
@@ -17,7 +18,7 @@ export default function Page() {
     }
 
     function convertToAscii() {
-        var result = convertoAsciiValue.split(' ').map(
+        const result = convertToAsciiValue.split(' ').map(
             function (binary) {
                 return String.fromCharCode(parseInt(binary, 2))
             }
@@ -27,6 +28,7 @@ export default function Page() {
 
     return (
         <Layout>
+            <Header title="Ascii - Binary Converter" />
             <div className="content-3in1">
                 <h1><a href="?" className="redTitle">convert 2 binary</a></h1>
                 <input
@@ -48,9 +50,9 @@ export default function Page() {
                 <input
                     type="text"
                     className="grayInput"
-                    value={convertoAsciiValue}
+                    value={convertToAsciiValue}
                     onChange={e => {
-                        setConvertoAsciiValue(e.currentTarget.value);
+                        setConvertToAsciiValue(e.currentTarget.value);
                     }}
                 />
                 <br/>

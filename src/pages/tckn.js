@@ -9,15 +9,21 @@ export default function Page() {
 
     const onFormSubmit = e => {
         e.preventDefault();
-        validateTckn()
+        validateTckn(inputValue)
     }
 
     function generateTckn(copy) {
         let tmpTckn = "" + Math.floor(Math.random() * 10000000000000000)
-        let splitTckn = tmpTckn.substr(0, 9).split("").map(numStr => parseInt(numStr));
+        let splitTckn = tmpTckn.split("").map(numStr => parseInt(numStr)).slice(0, 9);
+        let oddTotal = splitTckn
+            .slice(0, 9)
+            .filter((item, id) => id % 2 === 0)
+            .reduce((partialSum, item) => partialSum + item, 0)
 
-        let oddTotal = splitTckn[0] + splitTckn[2] + splitTckn[4] + splitTckn[6] + splitTckn[8];
-        let evenTotal = splitTckn[1] + splitTckn[3] + splitTckn[5] + splitTckn[7];
+        let evenTotal = splitTckn
+            .slice(0, 9)
+            .filter((item, id) => id % 2 === 1)
+            .reduce((partialSum, item) => partialSum + item, 0)
 
         let oddCalculation = ((oddTotal * 7) - evenTotal) % 10;
         splitTckn.push(oddCalculation);
@@ -31,7 +37,7 @@ export default function Page() {
         validateTckn(tckn);
 
         if (copy) {
-            navigator.clipboard.writeText(tckn)
+            navigator.clipboard.writeText(tckn).then()
         }
     }
 
@@ -67,8 +73,15 @@ export default function Page() {
 
         let splitTckn = tckn.split("").map(numStr => parseInt(numStr));
 
-        let oddTotal = splitTckn[0] + splitTckn[2] + splitTckn[4] + splitTckn[6] + splitTckn[8];
-        let evenTotal = splitTckn[1] + splitTckn[3] + splitTckn[5] + splitTckn[7];
+        let oddTotal = splitTckn
+            .slice(0, 9)
+            .filter((item, id) => id % 2 === 0)
+            .reduce((partialSum, item) => partialSum + item, 0)
+
+        let evenTotal = splitTckn
+            .slice(0, 9)
+            .filter((item, id) => id % 2 === 1)
+            .reduce((partialSum, item) => partialSum + item, 0)
 
         let oddCalculation = ((oddTotal * 7) - evenTotal) % 10;
         if (oddCalculation !== splitTckn[9]) {
@@ -76,11 +89,7 @@ export default function Page() {
         }
 
         let first10Total = splitTckn.slice(0, 10).reduce((a, b) => a + b, 0);
-        if (first10Total % 10 !== splitTckn[10]) {
-            return false
-        }
-
-        return true;
+        return first10Total % 10 === splitTckn[10];
     }
 
     return (

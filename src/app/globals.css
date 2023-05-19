@@ -95,6 +95,13 @@ textarea {
     width: 45%;
 }
 
+.content-full {
+    float: left;
+    padding: 30px;
+    padding-right: 0;
+    width: 100%;
+}
+
 .content-3in1-spacer {
     width: 2%;
     float: left;
@@ -119,6 +126,7 @@ textarea {
 
 .button {
     font-size: 19px;
+    margin-right: 10px;
 }
 
 .resultDiv {

@@ -1,6 +1,7 @@
 import Layout from "@/components/layout";
 import {useState} from "react"
 import ToolSpacer from "@/components/toolSpacer";
+import Header from "@/components/header";
 
 export default function Page() {
 
@@ -13,20 +14,20 @@ export default function Page() {
     }
 
     function timeToHuman() {
-        var unixTimeStamp = inputValue.length === 0 ? 0 : parseInt(inputValue)
-        var theDate = new Date(unixTimeStamp * 1000);
+        const unixTimeStamp = inputValue.length === 0 ? 0 : parseInt(inputValue)
+        const theDate = new Date(unixTimeStamp * 1000);
         setResultValue(theDate.toGMTString())
     }
 
     function getNow() {
-        var theDate = new Date()
-        setInputValue(Math.ceil(theDate.getTime() / 1000))
-        setResultValue(theDate.toGMTString())
+        const theDate = new Date()
+        setInputValue(Math.floor(theDate.getTime() / 1000).toString())
+        setResultValue(theDate.toUTCString())
     }
 
     return (
         <Layout>
-
+            <Header title="Unix Time Conversion" />
             <div className="content-3in1">
                 <form onSubmit={onFormSubmit}>
                 <h1><a href="?" className="redTitle">Unix Timestamp</a></h1>

@@ -14,7 +14,8 @@ export default function Page() {
         {enabled: true, href: "dencoder", title: "Decode / Encode URL"},
         {enabled: true, href: "tckn", title: "Validate and Generate TCKN"},
         {enabled: true, href: "ascii-table", title: "Table of ASCII Characters"},
-        {enabled: true, href: "demo-information", title: "Demo ZIP / Credit Card. etc.."}
+        {enabled: true, href: "demo-information", title: "Demo ZIP / Credit Card. etc.."},
+        {enabled: true, href: "base64-decode-encode", title: "Base64 Decoder/Encoder"}
     ]
 
     const references = [
@@ -26,6 +27,8 @@ export default function Page() {
     return (
         <Layout>
             <Header title="Kelebek's Tools" />
+
+            <Header title="" />
             <div className="content-3in1">
                 <h1>Tools :</h1>
                 <ul>

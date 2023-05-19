@@ -1,6 +1,7 @@
 import Layout from "@/components/layout";
 import {useState} from "react"
 import ToolSpacer from "@/components/toolSpacer";
+import Header from "@/components/header";
 
 export default function Page() {
 
@@ -18,6 +19,7 @@ export default function Page() {
 
     return (
         <Layout>
+            <Header title="Decimal - Hexadecimal Converter" />
             <div className="content-3in1">
                 <h1><a href="?" className="redTitle">convert 2 hexadecimal</a></h1>
                 <input
