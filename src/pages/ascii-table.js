@@ -1,9 +1,23 @@
 import Layout from "@/components/layout";
+import BigContent from "@/components/BigContent";
 
 export default function Page() {
+    const escapedChars = [
+        {asciiName: "null", description: "null byte", cEscapeSequence: "\\0"},
+        {asciiName: "bel", description: "bell character", cEscapeSequence: "\\a"},
+        {asciiName: "bs", description: "backspace", cEscapeSequence: "\\b"},
+        {asciiName: "ht", description: "horizontal tab", cEscapeSequence: "\\t"},
+        {asciiName: "np", description: "form feed", cEscapeSequence: "\\f"},
+        {asciiName: "nl", description: "newline", cEscapeSequence: "\\n"},
+        {asciiName: "cr", description: "carriage return", cEscapeSequence: "\\r"},
+        {asciiName: "vt", description: "vertical tab", cEscapeSequence: ""},
+        {asciiName: "esc", description: "escape", cEscapeSequence: ""},
+        {asciiName: "sp", description: "space", cEscapeSequence: ""}
+    ]
+
     return (
         <Layout title="Table of ASCII Characters">
-            <div className="content" align="center">
+            <BigContent align="center">
                 <h1>Table of ASCII Characters</h1>
 
                 <pre>
@@ -49,59 +63,16 @@ Char  Dec  Oct  Hex | Char  Dec  Oct  Hex | Char  Dec  Oct  Hex | Char  Dec  Oct
                         <th align="left"> Description</th>
                         <th> C Escape Sequence</th>
                     </tr>
-                    <tr>
-                        <td> nul</td>
-                        <td> null byte</td>
-                        <td align="center"> \0</td>
-                    </tr>
-                    <tr>
-                        <td> bel</td>
-                        <td> bell character</td>
-                        <td align="center"> \a</td>
-                    </tr>
-                    <tr>
-                        <td> bs</td>
-                        <td> backspace</td>
-                        <td align="center"> \b</td>
-                    </tr>
-                    <tr>
-                        <td> ht</td>
-                        <td> horizontal tab</td>
-                        <td align="center"> \t</td>
-                    </tr>
-                    <tr>
-                        <td> np</td>
-                        <td> form feed</td>
-                        <td align="center"> \f</td>
-                    </tr>
-                    <tr>
-                        <td> nl</td>
-                        <td> newline</td>
-                        <td align="center"> \n</td>
-                    </tr>
-                    <tr>
-                        <td> cr</td>
-                        <td> carriage return</td>
-                        <td align="center"> \r</td>
-                    </tr>
-                    <tr>
-                        <td> vt</td>
-                        <td> vertical tab</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td> esc</td>
-                        <td> escape</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td> sp</td>
-                        <td> space</td>
-                        <td></td>
-                    </tr>
+                    {escapedChars.map((escapedChar) =>
+                        <tr key={escapedChar.id}>
+                            <td>{escapedChar.asciiName}</td>
+                            <td>{escapedChar.description}</td>
+                            <td align="center">{escapedChar.cEscapeSequence}</td>
+                        </tr>
+                    )}
                     </tbody>
                 </table>
-            </div>
+            </BigContent>
         </Layout>
     )
 }

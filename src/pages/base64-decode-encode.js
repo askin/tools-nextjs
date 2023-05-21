@@ -1,5 +1,6 @@
 import Layout from "@/components/layout";
 import {useState} from "react"
+import BigContent from "@/components/BigContent";
 
 export default function Page() {
     const [inputValue, setInputValue] = useState("");
@@ -20,7 +21,7 @@ export default function Page() {
 
     return (
         <Layout title="Base64 Decoder/Encoder">
-            <div className="content-full">
+            <BigContent>
                 <form>
                     <h1>Enter text:</h1>
                     <textarea cols="100" rows="10" id="dencoder" name="dencoder" value={inputValue}
@@ -41,7 +42,7 @@ export default function Page() {
                     <input type="button" className="button" value="Copy to clipboard" onClick={() => navigator.clipboard.writeText(resultValue)}/>
                 </form>
                 <div id="renderAsHtml"></div>
-            </div>
+            </BigContent>
         </Layout>
     )
 }

@@ -1,20 +1,46 @@
-import ToolLink from  '../components/toollink'
 import Layout from '../components/layout'
 import ToolSpacer from "@/components/toolSpacer";
+import LinksComponent from "@/components/LinksComponent";
+import SmallContent from "@/components/SmallContent";
 
 export default function Page() {
     const tools = [
-        {enabled: true, href: "binary-ascii-converter", title: "Ascii - Binary Converter"},
-        {enabled: false, href: "get-header.php", title: "Get Web Page Header"},
-        {enabled: true, href: "decimal-hexadecimal", title: "Decimal - Hexadecimal Converter"},
-        {enabled: false, href: "whois", title: "Who is"},
-        {enabled: true, href: "whatismyip", title: "What is my IP?"},
-        {enabled: true, href: "unixtimestamp", title: "Unix Time Conversion"},
-        {enabled: true, href: "dencoder", title: "Decode / Encode URL"},
-        {enabled: true, href: "tckn", title: "Validate and Generate TCKN"},
-        {enabled: true, href: "ascii-table", title: "Table of ASCII Characters"},
-        {enabled: true, href: "demo-information", title: "Demo ZIP / Credit Card. etc.."},
-        {enabled: true, href: "base64-decode-encode", title: "Base64 Decoder/Encoder"}
+        {
+            title: "Converters: ",
+            links: [
+                {enabled: true, href: "binary-ascii-converter", title: "Ascii - Binary Converter"},
+                {enabled: true, href: "decimal-hexadecimal", title: "Decimal - Hexadecimal Converter"},
+                {enabled: true, href: "unixtimestamp", title: "Unix Time Conversion"}
+            ]
+        },
+        {
+            title: "Decoders and Encoders: ",
+            links: [
+                {enabled: true, href: "dencoder", title: "Decode / Encode URL"},
+                {enabled: true, href: "base64-decode-encode", title: "Base64 Decoder/Encoder"}
+            ]
+        },
+        {
+            title: "Network Tools: ",
+            links: [
+                {enabled: false, href: "get-header.php", title: "Get Web Page Header"},
+                {enabled: false, href: "whois", title: "Who is"},
+                {enabled: true, href: "whatismyip", title: "What is my IP?"},
+            ]
+        },
+        {
+            title: "Generators: ",
+            links: [
+                {enabled: true, href: "tckn", title: "Validate and Generate TCKN"},
+            ]
+        },
+        {
+            title: "Informations: ",
+            links: [
+                {enabled: true, href: "ascii-table", title: "Table of ASCII Characters"},
+                {enabled: true, href: "demo-information", title: "Demo ZIP / Credit Card. etc.."},
+            ]
+        }
     ]
 
     const references = [
@@ -25,23 +51,15 @@ export default function Page() {
 
     return (
         <Layout title="Kelebek's Tools">
-            <div className="content-3in1">
-                <h1>Tools :</h1>
-                <ul>
-                    {tools.filter((tool) => (tool.enabled)).map((tool) => (
-                        <ToolLink key={tool.id} href={tool.href} title={tool.title}/>
-                    ))}
-                </ul>
-            </div>
+            <SmallContent>
+                {tools.map((tool) => (
+                    <LinksComponent key={tool.id} title={tool.title} links={tool.links} />
+                ))}
+            </SmallContent>
             <ToolSpacer />
-            <div className="content-3in1">
-                <h1>References :</h1>
-                <ul>
-                    {references.filter((reference) => (reference.enabled)).map((reference) => (
-                        <ToolLink key={reference.id} href={reference.href} title={reference.title} target="blank"/>
-                    ))}
-                </ul>
-            </div>
+            <SmallContent>
+                <LinksComponent title="References: " links={references} />
+            </SmallContent>
         </Layout>
     )
 }

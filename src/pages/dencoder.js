@@ -1,5 +1,6 @@
 import Layout from "@/components/layout";
 import {useState} from "react"
+import BigContent from "@/components/BigContent";
 
 export default function Page() {
     const [inputValue, setInputValue] = useState("");
@@ -18,7 +19,7 @@ export default function Page() {
 
     return (
         <Layout title="Decode / Encode URL">
-            <div className="content-3in1">
+            <BigContent>
                 <form>
                     <h1>enter url</h1>
                     <textarea cols="100" rows="10" id="dencoder" name="dencoder" value={inputValue}
@@ -29,7 +30,7 @@ export default function Page() {
                     <input type="button" value="Decode" onClick={decodeURL} />
                     <input type="button" value="Encode" onClick={encodeURL}/>
                 </form>
-            </div>
+            </BigContent>
         </Layout>
     )
 }

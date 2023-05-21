@@ -1,6 +1,7 @@
 import Layout from "@/components/layout";
 import {useState} from "react"
 import ToolSpacer from "@/components/toolSpacer";
+import SmallContent from "@/components/SmallContent";
 
 export default function Page() {
 
@@ -18,7 +19,7 @@ export default function Page() {
 
     return (
         <Layout title="Decimal - Hexadecimal Converter">
-            <div className="content-3in1">
+            <SmallContent>
                 <h1><a href="?" className="redTitle">convert 2 hexadecimal</a></h1>
                 <input
                     type="text"
@@ -33,9 +34,9 @@ export default function Page() {
                 <br/>
                 <input type="button" name="button" id="button" value="convert" className="button"
                        onClick={decimalToHex}/>
-            </div>
+            </SmallContent>
             <ToolSpacer image={false} />
-            <div className="content-3in1">
+            <SmallContent>
                 <h1><a href="?" className="grayTitle">convert 2 decimal</a></h1>
                 <input
                     type="text"
@@ -50,7 +51,7 @@ export default function Page() {
                 <br/>
                 <input type="button" name="button" id="button2" value="convert" className="button"
                        onClick={hexToDecimal}/>
-            </div>
+            </SmallContent>
             <div id="sonuc" className="resultDiv" align="center">{resultValue}</div>
         </Layout>
     )
