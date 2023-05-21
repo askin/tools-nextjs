@@ -37,11 +37,7 @@ export default function Page() {
                         value={resultValue}
                         readOnly={true}
                         onChange={e => {
-                            try {
-                                setResultValue(e.currentTarget.value)
-                            } catch (err) {
-                                setResultValue(1)
-                            }
+                            setResultValue(e.currentTarget.value)
                         }}
                     />
                     <input type="button" className="button" value="Generate UUIDv4" onClick={() => setResultValue(crypto.randomUUID())}/>
