@@ -32,6 +32,7 @@ export default function Page() {
             title: "Generators: ",
             links: [
                 {enabled: true, href: "tckn", title: "Validate and Generate TCKN"},
+                {enabled: true, href: "uuid-tools", title: "Generate UUID"},
             ]
         },
         {
