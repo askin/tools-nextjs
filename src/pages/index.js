@@ -22,7 +22,7 @@ export default function Page() {
         {
             title: "Decode/Encode/Hash: ",
             links: [
-                {enabled: true, href: "dencoder", title: "Decode / Encode URL"},
+                {enabled: true, href: "url-encoder-decoder", title: "Decode / Encode URL"},
                 {enabled: true, href: "base64-decode-encode", title: "Base64 Decoder/Encoder"},
                 {enabled: true, href: "hash-tools", title: "Hash Tools"},
             ]
