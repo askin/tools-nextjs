@@ -30,8 +30,6 @@ export default function Page() {
                         setDecimalToHexValue(e.currentTarget.value);
                     }}
                 />
-                <br/>
-                <br/>
                 <input type="button" name="button" id="button" value="convert" className="button"
                        onClick={decimalToHex}/>
             </SmallContent>
@@ -47,8 +45,6 @@ export default function Page() {
                         setHexToDecimalValue(e.currentTarget.value);
                     }}
                 />
-                <br/>
-                <br/>
                 <input type="button" name="button" id="button2" value="convert" className="button"
                        onClick={hexToDecimal}/>
             </SmallContent>

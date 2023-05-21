@@ -38,8 +38,6 @@ export default function Page() {
                         setConvertToBinaryValue(e.currentTarget.value);
                     }}
                 />
-                <br/>
-                <br/>
                 <input type="button" name="button" id="button" value="convert" className="button"
                        onClick={convertToBinary}/>
             </SmallContent>
@@ -54,8 +52,6 @@ export default function Page() {
                         setConvertToAsciiValue(e.currentTarget.value);
                     }}
                 />
-                <br/>
-                <br/>
                 <input type="button" name="button" id="button2" value="convert" className="button"
                        onClick={convertToAscii}/>
             </SmallContent>

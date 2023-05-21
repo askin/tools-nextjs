@@ -98,19 +98,19 @@ export default function Page() {
                 </h1>
                 <input
                     type="text"
-                    className="redInput bigInput"
+                    className="redInput"
                     value={inputValue}
                     onChange={e => {
                         setInputValue(e.currentTarget.value);
                     }}
                 />
+                <input type="button" className="button" value="Generate TCKN" onClick={() =>  generateTckn(false) }/>
+                <input type="button" className="button" value="Generate and Copy TCKN" onClick={() => generateTckn(true) } />
+                <input type="button" className="button" value="Validate TCKN" onClick={() => validateTckn(inputValue) }/>
 
                 <h1 className="redTitle">
                     TCKN is: <span className={resultClass} id="validation">{resultValue}</span>
                 </h1>
-                <input type="button" value="Generate TCKN" onClick={() =>  generateTckn(false) }/>
-                <input type="button" value="Generate and Copy TCKN" onClick={() => generateTckn(true) } />
-                <input type="button" value="Validate TCKN" onClick={() => validateTckn(inputValue) }/>
             </form>
         </Layout>
     )

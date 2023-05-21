@@ -1,6 +1,7 @@
 import Layout from "@/components/layout";
 import {useState} from "react"
 import ToolSpacer from "@/components/toolSpacer";
+import SmallContent from "@/components/SmallContent";
 
 export default function Page() {
 
@@ -26,7 +27,7 @@ export default function Page() {
 
     return (
         <Layout title="Unix Time Conversion">
-            <div className="content-3in1">
+            <SmallContent>
                 <form onSubmit={onFormSubmit}>
                 <h1><a href="?" className="redTitle">Unix Timestamp</a></h1>
                 <input
@@ -37,15 +38,12 @@ export default function Page() {
                         setInputValue(e.currentTarget.value);
                     }}
                 />
-                <br/>
-                <br/>
                 <input type="button" name="button" id="timestamp" value="Convert" className="button" onClick={timeToHuman} onSubmit={timeToHuman} />
-                {' '}
                 <input type="button" name="button" id="timestamp" value="Now" className="button" onClick={getNow}/>
                 </form>
-            </div>
+            </SmallContent>
             <ToolSpacer image={false} />
-            <div className="content-3in1">
+            <SmallContent>
                 <h1><a href="?" className="grayTitle">Date/Time</a></h1>
                 <input
                     type="text"
@@ -53,7 +51,7 @@ export default function Page() {
                     disabled="true"
                     value={resultValue}
                 />
-            </div>
+            </SmallContent>
         </Layout>
     )
 }

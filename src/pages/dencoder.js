@@ -27,8 +27,8 @@ export default function Page() {
                                   setInputValue(e.currentTarget.value);
                               }}
                     />
-                    <input type="button" value="Decode" onClick={decodeURL} />
-                    <input type="button" value="Encode" onClick={encodeURL}/>
+                    <input type="button" className="button" value="Decode" onClick={decodeURL} />
+                    <input type="button" className="button" value="Encode" onClick={encodeURL}/>
                 </form>
             </BigContent>
         </Layout>
