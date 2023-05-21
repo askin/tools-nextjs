@@ -14,6 +14,12 @@ export default function Page() {
             ]
         },
         {
+            title: "Text Tools: ",
+            links: [
+                {enabled: true, href: "json-formatter", title: "JSON Formatter"},
+            ]
+        },
+        {
             title: "Decode/Encode/Hash: ",
             links: [
                 {enabled: true, href: "dencoder", title: "Decode / Encode URL"},
