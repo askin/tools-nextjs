@@ -1,10 +1,8 @@
 import Layout from "@/components/layout";
-import Header from "@/components/header"
 
 export default function Page() {
     return (
-        <Layout>
-            <Header title="Table of ASCII Characters"/>
+        <Layout title="Table of ASCII Characters">
             <div className="content" align="center">
                 <h1>Table of ASCII Characters</h1>
 

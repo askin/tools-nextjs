@@ -1,6 +1,5 @@
 import ToolLink from  '../components/toollink'
 import Layout from '../components/layout'
-import Header from '../components/header'
 import ToolSpacer from "@/components/toolSpacer";
 
 export default function Page() {
@@ -25,10 +24,7 @@ export default function Page() {
     ]
 
     return (
-        <Layout>
-            <Header title="Kelebek's Tools" />
-
-            <Header title="" />
+        <Layout title="Kelebek's Tools">
             <div className="content-3in1">
                 <h1>Tools :</h1>
                 <ul>

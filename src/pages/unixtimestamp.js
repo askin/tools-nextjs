@@ -1,7 +1,6 @@
 import Layout from "@/components/layout";
 import {useState} from "react"
 import ToolSpacer from "@/components/toolSpacer";
-import Header from "@/components/header";
 
 export default function Page() {
 
@@ -26,8 +25,7 @@ export default function Page() {
     }
 
     return (
-        <Layout>
-            <Header title="Unix Time Conversion" />
+        <Layout title="Unix Time Conversion">
             <div className="content-3in1">
                 <form onSubmit={onFormSubmit}>
                 <h1><a href="?" className="redTitle">Unix Timestamp</a></h1>

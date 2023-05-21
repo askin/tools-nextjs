@@ -1,11 +1,9 @@
 import Layout from "@/components/layout";
-import Header from "@/components/header"
 import ToolSpacer from "@/components/toolSpacer";
 
 export default function Page() {
     return (
-        <Layout>
-            <Header title="Demo ZIP / Credit Card. etc.."/>
+        <Layout title="Demo ZIP / Credit Card. etc..">
             <div className="content">
                 <div className="content-3in1 menu-item">
                     <div>

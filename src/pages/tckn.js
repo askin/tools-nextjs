@@ -1,6 +1,5 @@
 import Layout from "@/components/layout";
 import {useState} from "react"
-import Header from "@/components/header"
 
 export default function Page() {
     const [inputValue, setInputValue] = useState("");
@@ -93,8 +92,7 @@ export default function Page() {
     }
 
     return (
-        <Layout>
-            <Header title="Validate and Generate TCKN" />
+        <Layout title="Validate and Generate TCKN">
             <form onSubmit={onFormSubmit}>
                 <h1><a href="?" className="redTitle">Enter TCKN</a>
                 </h1>

@@ -1,6 +1,5 @@
 import Layout from "@/components/layout";
 import {useState} from "react"
-import Header from "@/components/header";
 
 export default function Page() {
     const [inputValue, setInputValue] = useState("");
@@ -20,8 +19,7 @@ export default function Page() {
     }
 
     return (
-        <Layout>
-            <Header title="Base64 Decoder/Encoder" />
+        <Layout title="Base64 Decoder/Encoder">
             <div className="content-full">
                 <form>
                     <h1>Enter text:</h1>
