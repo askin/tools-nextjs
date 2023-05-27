@@ -27,7 +27,7 @@ export default function Page() {
                 alert("Web page is not fetched!")
             }
         }).then((data) => {
-            if (data === null) {
+            if (data !== null) {
                 setHeaders(data.headers);
             }
         });
