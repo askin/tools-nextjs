@@ -30,13 +30,25 @@
  * TODO: Use tailwind correctly
  */
 
-body, td, th {
+body {
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 10px;
     color: #056070;
     background-image: url(/images/fading_background_18.png);
     background-repeat: repeat-x;
     margin: 0;
+}
+
+td, th, tr, tbody, table {
+    font-family: monospace;
+    border: 1px solid #056070;
+    border-collapse: collapse;
+    padding: 0 0.2em 0 0.2em;
+    font-size: 15px;
+}
+
+thead {
+    background: #E3E3E3;
 }
 
 a {
@@ -150,4 +162,8 @@ textarea {
 .greenTitle {
     text-decoration: none;
     color: #225533;
+}
+
+.fullWidth {
+    width: 100%;
 }

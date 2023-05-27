@@ -30,7 +30,7 @@ export default function Page() {
         {
             title: "Network Tools: ",
             links: [
-                {enabled: false, href: "get-header.php", title: "Get Web Page Header"},
+                {enabled: true, href: "web-page-header", title: "Get Web Page Header"},
                 {enabled: false, href: "whois", title: "Who is"},
                 {enabled: true, href: "whatismyip", title: "What is my IP?"},
             ]
