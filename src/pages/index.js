@@ -8,7 +8,7 @@ export default function Page() {
         {
             title: "Converters: ",
             links: [
-                {enabled: true, href: "binary-ascii-converter", title: "Ascii - Binary Converter"},
+                {enabled: true, href: "ascii-binary-hex-converter", title: "Ascii - Hex/Binary Converter"},
                 {enabled: true, href: "decimal-hexadecimal", title: "Decimal - Hexadecimal Converter"},
                 {enabled: true, href: "unixtimestamp", title: "Unix Time Conversion"}
             ]
