@@ -31,7 +31,7 @@ export default function Page() {
             title: "Network Tools: ",
             links: [
                 {enabled: true, href: "web-page-header", title: "Get Web Page Header"},
-                {enabled: false, href: "whois", title: "Who is"},
+                {enabled: true, href: "whois", title: "Who is"},
                 {enabled: true, href: "whatismyip", title: "What is my IP?"},
             ]
         },

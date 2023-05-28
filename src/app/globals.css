@@ -167,3 +167,10 @@ textarea {
 .fullWidth {
     width: 100%;
 }
+
+.borderedView {
+    font-family: monospace;
+    border: 1px solid #056070;
+    padding: 0 0.2em 0 0.2em;
+    font-size: 1.2em;
+}
