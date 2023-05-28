@@ -42,7 +42,7 @@ export default function Page() {
                                setDomain(e.currentTarget.value);
                            }}
                     />
-                    <input type="button" className="button" value="Get Web Page Headers" id="webpageurl" onClick={whois}/>
+                    <input type="button" className="button" value="Who is?" id="webpageurl" onClick={whois}/>
                 </form>
                 <pre className="borderedView">{whoisText}</pre>
             </BigContent>
