@@ -16,7 +16,7 @@ export default function Page() {
         {
             title: "Text Tools: ",
             links: [
-                {enabled: true, href: "json-formatter", title: "JSON Formatter"},
+                {enabled: true, href: "prettier", title: "JSON/XML Formatter"},
             ]
         },
         {
