@@ -8,7 +8,7 @@ export default function Page() {
 
     function decode() {
         try {
-            setResultValue(atob(inputValue))
+            setResultValue(Buffer.from(inputValue, 'base64'))
         } catch (err) {
             setResultValue(err.message)
         }
@@ -16,7 +16,7 @@ export default function Page() {
     }
 
     function encode() {
-        setResultValue(btoa(inputValue))
+        setResultValue(Buffer.from(inputValue).toString('base64'))
     }
 
     return (
