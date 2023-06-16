@@ -93,25 +93,27 @@ export default function Page() {
 
     return (
         <Layout title="Validate and Generate TCKN">
-            <form onSubmit={onFormSubmit}>
-                <h1><a href="?" className="redTitle">Enter TCKN</a>
-                </h1>
-                <input
-                    type="text"
-                    className="redInput"
-                    value={inputValue}
-                    onChange={e => {
-                        setInputValue(e.currentTarget.value);
-                    }}
-                />
-                <input type="button" className="button" value="Generate TCKN" onClick={() =>  generateTckn(false) }/>
-                <input type="button" className="button" value="Generate and Copy TCKN" onClick={() => generateTckn(true) } />
-                <input type="button" className="button" value="Validate TCKN" onClick={() => validateTckn(inputValue) }/>
+            <div className="content-full">
+                <form onSubmit={onFormSubmit}>
+                    <h1><a href="?" className="redTitle">Enter TCKN</a>
+                    </h1>
+                    <input
+                        type="text"
+                        className="redInput"
+                        value={inputValue}
+                        onChange={e => {
+                            setInputValue(e.currentTarget.value);
+                        }}
+                    />
+                    <input type="button" className="button" value="Generate TCKN" onClick={() =>  generateTckn(false) }/>
+                    <input type="button" className="button" value="Generate and Copy TCKN" onClick={() => generateTckn(true) } />
+                    <input type="button" className="button" value="Validate TCKN" onClick={() => validateTckn(inputValue) }/>
 
-                <h1 className="redTitle">
-                    TCKN is: <span className={resultClass} id="validation">{resultValue}</span>
-                </h1>
-            </form>
+                    <h1 className="redTitle">
+                        TCKN is: <span className={resultClass} id="validation">{resultValue}</span>
+                    </h1>
+                </form>
+            </div>
         </Layout>
     )
 }

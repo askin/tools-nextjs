@@ -15,8 +15,10 @@ export default function Page() {
 
     return (
         <Layout title="What is my IP?">
-            <div className="redTitle">
-                <h1>Your IP is <span className="greenTitle" id="ipresult">{ resultValue }</span></h1>
+            <div className="content-full">
+                <div className="redTitle">
+                    <h1>Your IP is <span className="greenTitle" id="ipresult">{resultValue}</span></h1>
+                </div>
             </div>
         </Layout>
     )
