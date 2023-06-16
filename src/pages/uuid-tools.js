@@ -41,17 +41,19 @@ export default function Page() {
                         }}
                     />
                     <input type="button" className="button" value="Generate UUIDv4" onClick={() => setResultValue(crypto.randomUUID())}/>
+                    <input type="button" className="button" value="Copy UUIDv4" onClick={ () => navigator.clipboard.writeText(resultValue) }/>
                 </form>
             </BigContent>
             <BigContent>
                 <form onSubmit={onBulkFormSubmit}>
                     <h1 className="redTitle">Generate Bulk UUIDv4</h1>
                     <input type="button" className="button" value="Generate Bulk UUIDv4" onClick={generateBulkUUIDv4}/>
-                    <input type="number" min="1" max="100"
+                    <input type="number" className="button" min="1" max="100"
                            aria-describedby="countHelp" value={count} onChange={e => {
                             setCount(parseInt(e.currentTarget.value));
                         }}
                     />
+                    <input type="button" className="button" value="Copy Bulk UUIDv4" onClick={ () => navigator.clipboard.writeText(bulkResultValue) }/>
 
                     <textarea cols="100" rows="10" id="dencoder" name="dencoder" value={bulkResultValue}
                               onChange={e => {
