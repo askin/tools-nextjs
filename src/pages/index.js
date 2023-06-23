@@ -4,7 +4,7 @@ import LinksComponent from "@/components/LinksComponent";
 import SmallContent from "@/components/SmallContent";
 
 export default function Page() {
-    const tools = [
+    const toolsFirstColumn = [
         {
             title: "Converters: ",
             links: [
@@ -35,7 +35,9 @@ export default function Page() {
                 {enabled: true, href: "whois", title: "Who is"},
                 {enabled: true, href: "whatismyip", title: "What is my IP?"},
             ]
-        },
+        }
+    ]
+    const toolsSecondColumn = [
         {
             title: "Generators: ",
             links: [
@@ -49,6 +51,12 @@ export default function Page() {
                 {enabled: true, href: "ascii-table", title: "Table of ASCII Characters"},
                 {enabled: true, href: "demo-information", title: "Demo ZIP / Credit Card. etc.."},
             ]
+        },
+        {
+            title: "Cloud Tools: ",
+            links: [
+                {enabled: true, href: "google-drive", title: "Create Google Drive Download Link"},
+            ]
         }
     ]
 
@@ -61,12 +69,15 @@ export default function Page() {
     return (
         <Layout title="Kelebek's Tools">
             <SmallContent>
-                {tools.map((tool) => (
+                {toolsFirstColumn.map((tool) => (
                     <LinksComponent key={tool.id} title={tool.title} links={tool.links} />
                 ))}
             </SmallContent>
             <ToolSpacer />
             <SmallContent>
+                {toolsSecondColumn.map((tool) => (
+                    <LinksComponent key={tool.id} title={tool.title} links={tool.links} />
+                ))}
                 <LinksComponent title="References: " links={references} />
             </SmallContent>
         </Layout>
