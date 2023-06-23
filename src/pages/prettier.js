@@ -1,6 +1,6 @@
 import Layout from "@/components/layout";
 import BigContent from "@/components/BigContent";
-import HighlighCode from "@/components/HighlighCode";
+import HighlightCode from "@/components/HighlightCode";
 import {useState} from "react";
 import xmlFormat from 'xml-formatter';
 
@@ -57,7 +57,7 @@ export default function Page() {
                 />
                 </form>
 
-                <HighlighCode code={resultValue} language={languageValue} />
+                <HighlightCode code={resultValue} language={languageValue} />
             </BigContent>
         </Layout>
     )

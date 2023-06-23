@@ -25,6 +25,7 @@ export default function Page() {
                 {enabled: true, href: "url-encoder-decoder", title: "Decode / Encode URL"},
                 {enabled: true, href: "base64-decode-encode", title: "Base64 Decoder/Encoder"},
                 {enabled: true, href: "hash-tools", title: "Hash Tools"},
+                {enabled: true, href: "jwt", title: "JWT Tool"}
             ]
         },
         {

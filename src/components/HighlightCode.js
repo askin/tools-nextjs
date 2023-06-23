@@ -10,7 +10,7 @@ import "prismjs/plugins/toolbar/prism-toolbar.min.css";
 import "prismjs/plugins/toolbar/prism-toolbar.min";
 import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min";
 
-export default function HighlighCode({code, language}) {
+export default function HighlightCode({code, language}) {
     useEffect(() => {
         Prism.highlightAll();
     });
