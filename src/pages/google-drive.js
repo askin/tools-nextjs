@@ -24,9 +24,17 @@ export default function Page() {
         return "https://drive.google.com/u/3/uc?id=" + fileId + "&export=download&confirm=yes"
     }
 
+    function createGoogleDriveHostUrl(fileId) {
+        if (fileId == "") {
+            return ""
+        }
+        return "https://drive.google.com/u/3/uc?id=" + fileId
+    }
+
     const [googleDriveShareUrlValue, setGoogleDriveShareUrlValue] = useState("");
     const [fileIdValue, setFileIdValue] = useState("");
     const [googleDriveDownloadUrlValue, setGoogleDriveDownloadUrlValue] = useState("");
+    const [googleDriveHostUrlValue, setGoogleDriveHostUrlValue] = useState("");
 
     return (
         <Layout title="Create Google Drive Download Link">
@@ -42,7 +50,9 @@ export default function Page() {
                             let fileId = extractGoogleDriveFileId(e.currentTarget.value)
                             setFileIdValue(fileId)
                             let googleDriveDownloadUrl = createGoogleDriveDownloadUrl(fileId)
+                            let googleDriveHostUrl = createGoogleDriveHostUrl(fileId)
                             setGoogleDriveDownloadUrlValue(googleDriveDownloadUrl)
+                            setGoogleDriveHostUrlValue(googleDriveHostUrl)
                         }}
                     />
                     <h2>File Id: (If you have, enter file id)</h2>
@@ -53,7 +63,9 @@ export default function Page() {
                         onChange={e => {
                             setFileIdValue(e.currentTarget.value)
                             let googleDriveDownloadUrl = createGoogleDriveDownloadUrl(e.currentTarget.value)
+                            let googleDriveHostUrl = createGoogleDriveHostUrl(e.currentTarget.value)
                             setGoogleDriveDownloadUrlValue(googleDriveDownloadUrl)
+                            setGoogleDriveHostUrlValue(googleDriveHostUrl)
                         }}
                     />
                     <h2>Google Drive Download Url</h2>
@@ -64,11 +76,21 @@ export default function Page() {
                         readOnly={true}
                     />
 
+                    <h2>Google Drive Host Url</h2>
+                    <input
+                        type="text"
+                        className="redInput"
+                        value={googleDriveHostUrlValue}
+                        readOnly={true}
+                    />
+
                     <input type="button" className="button" value="Copy Download Url" onClick={ () => navigator.clipboard.writeText(googleDriveDownloadUrlValue) }/>
+                    <input type="button" className="button" value="Copy Host Url" onClick={ () => navigator.clipboard.writeText(googleDriveHostUrlValue) }/>
                 </form>
             </BigContent>
             <BigContent>
-                Url: <a href={googleDriveDownloadUrlValue} target="_blank">{googleDriveDownloadUrlValue}</a>
+                Download Url: <a href={googleDriveDownloadUrlValue} target="_blank">{googleDriveDownloadUrlValue}</a><br/>
+                Host Url: <a href={googleDriveHostUrlValue} target="_blank">{googleDriveHostUrlValue}</a>
             </BigContent>
         </Layout>
     )
